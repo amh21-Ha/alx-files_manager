@@ -1,7 +1,7 @@
 import request from 'supertest';
 import app from '../server';
 
-describe('POST /users', () => {
+describe('pOST /users', () => {
   it('should create a new user', async () => {
     const res = await request(app).post('/users').send({
       email: 'test@example.com',

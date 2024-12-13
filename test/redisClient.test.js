@@ -1,6 +1,6 @@
 import redisClient from '../utils/redis';
 
-describe('RedisClient', () => {
+describe('redisClient', () => {
   it('should set a value in Redis', async () => {
     await redisClient.set('key', 'value');
     expect(redisClient.set).toHaveBeenCalledWith('key', 'value');

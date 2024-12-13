@@ -1,7 +1,7 @@
 import request from 'supertest';
 import app from '../server';
 
-describe('GET /stats', () => {
+describe('gET /stats', () => {
   it('should return the correct stats', async () => {
     const res = await request(app).get('/stats');
     expect(res.status).toBe(200);

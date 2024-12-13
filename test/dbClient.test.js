@@ -1,6 +1,6 @@
 import dbClient from '../utils/db';
 
-describe('DBClient', () => {
+describe('dBClient', () => {
   it('should insert a document into the collection', async () => {
     const document = { name: 'test' };
     await dbClient.db.collection('users').insertOne(document);
@@ -11,7 +11,7 @@ describe('DBClient', () => {
     const document = { name: 'test' };
     dbClient.db.collection('users').findOne.mockResolvedValue(document);
     const result = await dbClient.db.collection('users').findOne({ name: 'test' });
-    expect(result).toEqual(document);
+    expect(result).toStrictEqual(document);
   });
 
   it('should update a document in the collection', async () => {
